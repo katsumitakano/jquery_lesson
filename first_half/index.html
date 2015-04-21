@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Lesson</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http:////code.jquery.com/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+    <p>このテキストの色を赤くします。</p>
+    <p>このテキストの色を赤くします。</p>
+    <p>このテキストの色を赤くします。</p>
+    <hr />
+    
+    <ul>
+        <li>りんご</li>
+        <li>みかん</li>
+        <li>ぶどう</li>
+    </ul>
+    <button>Click!</button>
+    <hr />
+
+    <div class="circle">Out</div>
+    <hr />
+    
+    <p>入力：<input type="text"></p>
+    <hr />
+    
+    <p>スクロール量：<span class="scrolled">0</span>px</p>
+    <hr />
+    
+    <img style="display:none;" src="image.jpg" alt="">
+    <hr />
+    
+    <div class="rect" style="display: none;">GoodBye</div>
+    <hr />
+    
+    <div class="box">Animate!</div>
+
+<script>
+$(function(){
+    $("p").css("color", "red");
+    
+    $("button").dblclick(function(){
+        $("ul").append("<li>Add</li>");
+    });
+    
+    $(".circle")
+        .mouseover(function(){
+            $(this).text("Over");
+        })
+        .mouseout(function(){
+            $(this).text("Out");
+    });
+    
+    $("input")
+        .focus(function(){
+            $(this).css("background-color", "pink");
+        })
+        .blur(function(){
+            $(this).css("background-color", "white");
+    });
+    
+    $(window).scroll(function(){
+        $(".scrolled").text( $(this).scrollTop() );
+    });
+    
+    $("img").fadeIn(1000);
+    
+    //$(".rect").slideDown();
+    
+    $(".box").animate({
+        left: "200px",
+        top: "100px"
+    }, 1500, function(){
+        $(this).css("background-color", "red");
+    });
+});
+</script>
+</body>
+</html>
