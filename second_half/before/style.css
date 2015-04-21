@@ -17,8 +17,7 @@ body{
 }
 
 /* Header */
-.navigation{
-    display: none;
+.navigation1{
     width: 100%;
     background-color: #313131;
     position: fixed;
@@ -26,16 +25,16 @@ body{
     opacity: 0;
     z-index: 100;
 }
-.navigation ul{
+.navigation1 ul{
     text-align: right;
     line-height: 60px;
     list-style: none;
 }
-.navigation ul li{
+.navigation1 ul li{
     display: inline;
     margin-right: 50px;
 }
-.navigation ul li a{
+.navigation1 ul li a{
     color: white;
     text-decoration: none;
 }
@@ -76,7 +75,6 @@ body{
 }
 
 .top_img > img{
-    display: none;
     width: 100%;
     height: auto;
 }
