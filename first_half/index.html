@@ -5,13 +5,16 @@
     <title>jQuery Lesson</title>
     <link rel="stylesheet" href="style.css">
     <script src="http:////code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="src.js"></script>
 </head>
 <body>
+    <!--  要素の操作、追加、削除  -->
     <p>このテキストの色を赤くします。</p>
     <p>このテキストの色を赤くします。</p>
     <p>このテキストの色を赤くします。</p>
     <hr />
     
+    <!--  click/dblclick  -->
     <ul>
         <li>りんご</li>
         <li>みかん</li>
@@ -20,62 +23,27 @@
     <button>Click!</button>
     <hr />
 
+    <!--  mouseover/mouseout  -->
     <div class="circle">Out</div>
     <hr />
     
+    <!--  focus/blur  -->
     <p>入力：<input type="text"></p>
     <hr />
     
+    <!--  scroll  -->
     <p>スクロール量：<span class="scrolled">0</span>px</p>
     <hr />
     
+    <!--  fadeIn/fadeOut  -->
     <img style="display:none;" src="image.jpg" alt="">
     <hr />
     
+    <!--  slideDown/slideUp  -->
     <div class="rect" style="display: none;">GoodBye</div>
     <hr />
     
+    <!--  animate  -->
     <div class="box">Animate!</div>
-
-<script>
-$(function(){
-    $("p").css("color", "red");
-    
-    $("button").dblclick(function(){
-        $("ul").append("<li>Add</li>");
-    });
-    
-    $(".circle")
-        .mouseover(function(){
-            $(this).text("Over");
-        })
-        .mouseout(function(){
-            $(this).text("Out");
-    });
-    
-    $("input")
-        .focus(function(){
-            $(this).css("background-color", "pink");
-        })
-        .blur(function(){
-            $(this).css("background-color", "white");
-    });
-    
-    $(window).scroll(function(){
-        $(".scrolled").text( $(this).scrollTop() );
-    });
-    
-    $("img").fadeIn(1000);
-    
-    //$(".rect").slideDown();
-    
-    $(".box").animate({
-        left: "200px",
-        top: "100px"
-    }, 1500, function(){
-        $(this).css("background-color", "red");
-    });
-});
-</script>
 </body>
 </html>
