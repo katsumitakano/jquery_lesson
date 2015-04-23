@@ -41,7 +41,16 @@ $(function(){
     });
 
     // 6. モーダルウィンドウ
-    // 後で作る
+    $(".modal__open").click(function(){
+        $(".overlay").css("display", "block");
+        $(".modal")
+            .css("top", $(window).scrollTop() + 100)
+            .fadeIn(500);
+    });
+    $(".modal__close").click(function(){
+        $(".overlay").css("display", "none");
+        $(".modal").css("display", "none");
+    });
     
     // 番外. スクロールに合わせてついてくるサイドバー
     var $side    = $(".main__side");
