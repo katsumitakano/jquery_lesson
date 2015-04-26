@@ -64,7 +64,7 @@ body{
     background-color: #313131;
     position: fixed;
     top: 0;
-    opacity: 0;
+    opacity: 1.0;
     z-index: 100;
 }
 .navigation1 ul{
@@ -149,7 +149,7 @@ body{
 .frame__caption{
     position: absolute;
     bottom: 0;
-    display: none;
+    display: block;
     box-sizing: border-box;
     padding: 0 20px;
     width: 100%;
